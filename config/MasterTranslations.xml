@@ -85,7 +85,7 @@
 		</Translation>
 		<Translation name="CP_error_unload_target_to_far_away_from_silo">
 			<Text language="de"><![CDATA[Ausgewählter Abladepunkt ist zu weit vom Silo entfernt.]]></Text>
-			<Text language="en"><![CDATA[Chosen unloading point is to far away from the silo.]]></Text>
+			<Text language="en"><![CDATA[Selected unloading point is too far away from the silo.]]></Text>
 		</Translation>
 	</Category>
 	<Category name="AI job parameters">	
@@ -99,7 +99,7 @@
 		</Translation>
 		<Translation name="CP_fieldWorkJobParameters_parkPosition_title">
 			<Text language="de"><![CDATA[Parkposition:]]></Text>
-			<Text language="en"><![CDATA[Park position:]]></Text>
+			<Text language="en"><![CDATA[Parking position:]]></Text>
 		</Translation>
 		<Translation name="CP_fieldWorkJobParameters_subTitle_startAt">
 			<Text language="de"><![CDATA[Start am:]]></Text>
@@ -910,7 +910,7 @@
 			<Text language="en"><![CDATA[Number of headlands]]></Text>
 		</Translation>
 		<Translation name="CP_vehicle_courseGeneratorSetting_numberOfHeadlands_tooltip">
-			<Text language="de"><![CDATA[Anzahl Vorgewende. Wert: 0 - 40]]></Text>
+			<Text language="de"><![CDATA[Anzahl der Vorgewende. Wert: 0 - 40]]></Text>
 			<Text language="en"><![CDATA[Number of headlands. Value: 0 - 40]]></Text>
 		</Translation>
 		<Translation name="CP_vehicle_courseGeneratorSetting_headlandOverlapPercent_title">
@@ -942,7 +942,7 @@
 			<Text language="en"><![CDATA[Number of circles]]></Text>
 		</Translation>
 		<Translation name="CP_vehicle_courseGeneratorSetting_numberOfCircles_tooltip">
-			<Text language="de"><![CDATA[Anzahl Runden für kreisförmig. Wert: 1 - 12]]></Text>
+			<Text language="de"><![CDATA[Anzahl der Runden für kreisförmig. Wert: 1 - 12]]></Text>
 			<Text language="en"><![CDATA[Number of circles for racetrack. Value: 1 - 12]]></Text>
 		</Translation>
 		<Translation name="CP_vehicle_courseGeneratorSetting_rowsPerLand_title">
@@ -971,7 +971,7 @@
 		</Translation>
 		<Translation name="CP_vehicle_courseGeneratorSetting_islandHeadlandClockwise_title">
 			<Text language="de"><![CDATA[Insel Vorgewende-Richtung]]></Text>
-			<Text language="en"><![CDATA[Island Headland direction]]></Text>
+			<Text language="en"><![CDATA[Island headland direction]]></Text>
 		</Translation>
 		<Translation name="CP_vehicle_courseGeneratorSetting_islandHeadlandClockwise_tooltip">
 			<Text language="de"><![CDATA[Inseln im oder gegen den Uhrzeigersinn umfahren.]]></Text>
@@ -1211,11 +1211,11 @@
 		</Translation>
 		<Translation name="CP_global_setting_wageModifier_title">
 			<Text language="de"><![CDATA[CP-Fahrerlohn]]></Text>
-			<Text language="en"><![CDATA[Cp driver wages]]></Text>
+			<Text language="en"><![CDATA[CP driver wages]]></Text>
 		</Translation>
 		<Translation name="CP_global_setting_wageModifier_tooltip">
 			<Text language="de"><![CDATA[Lohn für CP-Fahrer, prozentual von dem Standardlohn.]]></Text>
-			<Text language="en"><![CDATA[Cp driver wages as percentage of normal worker's wages.]]></Text>
+			<Text language="en"><![CDATA[CP driver wages as percentage of normal worker's wages.]]></Text>
 		</Translation>
 		<Translation name="CP_global_setting_autoRepair_title">
 			<Text language="de"><![CDATA[Automatische Reparatur]]></Text>
@@ -1730,7 +1730,7 @@ The course is saved automatically on closing of the editor and overrides the sel
 		</Translation>
 		<Translation name="CP_infoTexts_waitForSnowToClear">
 			<Text language="de"><![CDATA[Warte solange Schnee liegt]]></Text>
-			<Text language="en"><![CDATA[Waits for snow to disappear]]></Text>
+			<Text language="en"><![CDATA[Waiting for snow to disappear]]></Text>
 		</Translation>
 		<Translation name="CP_infoTexts_waitForUnloader">
 			<Text language="de"><![CDATA[Warte auf Abfahrer]]></Text>
@@ -1864,7 +1864,6 @@ The course is saved automatically on closing of the editor and overrides the sel
 		</Translation>
 		<Translation name="CP_help_page_GeneralBase_text">
 			<Text language="de"><![CDATA[
-
 Mit Courseplay ist es möglich, Feldkurse mit zusätzlichen Funktionen zu generieren, beispielsweise Vorgewende.
 Ebenso ermöglicht es die Nutzung von Ballenpressen und Sammelwagen mit dem Helfer auf dem selben Kurs, welcher zuvor von einem Mähwerk oder Drescher bearbeitet wurde.
 Eine weitere Funktion ist das Ballenwickeln oder -sammeln auf einem Feld.
@@ -2047,7 +2046,7 @@ headland turn whenever the headland's curvature is less than the turning radius 
 corners are based on the vehicle's turning radius, so for these headlands, the vehicle won't perform a turn maneuver in the corners.
 - Corner radius: Sets the radius for the round corners. If you know a following work tool have a minimum radius of 10, you may set this value to 10 for the course.
 - Headland direction: clockwise or counter-clockwise. This can be important for combines and harvesters, depending on
-wich side the pipe or conveyor belt is.
+which side the pipe or conveyor belt is.
 - Headland overlap: How much one headland overlaps with the next. This is to avoid missing fruit in some cases.
 - Field Margin: Positive values reduce field size to add a buffer around the worked area in case you have obstacles near the field border.
 Negative values enlarge worked area beyond the field boundary to cover up field borders that are not perfectly detected.
@@ -2075,7 +2074,7 @@ Spiral is a best for towed harvesters with an offset to keep the tool in the fru
 - Feldmitte: Es gibt verschiedene Arbeitsweisen, um die Feldmitte zu bearbeiten. Der klassische Weg ist hoch/runter.
 Spiralförmig, kreisförmig und Beete haben jeweils ihre eigenen Vorteile gegenüber den anderen. Bei Beeten zum Beispiel wird der Drescher die meiste Zeit mit dem Rohr außerhalb der Frucht fahren, um ein einfacheres Entladen zu ermöglichen.
 - Mitte Richtung: Funktioniert genau so wie beim Vorgewende, ist jetzt aber unabhängig davon einstellbar.
-- Gleichmäßige Bahnenbreite: Wenn die Feldmitte eine gesammte Breite hat, die sich nicht gleichmäßig auf die Arbeitsbreite des Tools aufteilen lässt, wird am Anfang oder am Ende eine sehr schmale Bahn gezogen. Um das zu vermeiden, wird die Bahnenbreite so reduziert, dass alle Bahnen die gleiche Breite haben.
+- Gleichmäßige Bahnenbreite: Wenn die Feldmitte eine gesamte Breite hat, die sich nicht gleichmäßig auf die Arbeitsbreite des Tools aufteilen lässt, wird am Anfang oder am Ende eine sehr schmale Bahn gezogen. Um das zu vermeiden, wird die Bahnenbreite so reduziert, dass alle Bahnen die gleiche Breite haben.
 - Startrichtung: Automatisch findet meistens die beste Startrichtung, manchmal hilft es aber auch, die längste Kante zu nehmen. Sollte das auch nicht passen, kannst du den Wert auf Manuell stellen.
 - Richtungswinkel der Bahnen: Ist die Startrichtung auf Manuell gesetzt, erscheint diese Einstellung und bestimmt die Richtung der Bahnen.
 
