@@ -228,14 +228,14 @@
             <Bitmap profile="fs25_stopClipper" name="bottomClipper" />
         </GuiElement>
 
-        <Bitmap profile="fs25_multiTextOptionContainer" id="booleanPrefab">
+        <Bitmap profile="fs25_multiTextOptionContainer" id="booleanPrefab" focusFallthrough = "true">
             <CpBinaryyOption profile="fs25_settingsBinaryOption" name="setting" namedComponents="true" onClick="onClickCpMultiTextOption">
                 <Text profile="fs25_multiTextOptionTooltip" name="tooltip"/>
                 <Text profile="cpSettingsMultiOptionTitle" name="label"/>
             </CpBinaryyOption>
         </Bitmap>
         <Text profile="fs25_settingsSectionHeader" name="sectionHeader" id="sectionHeaderPrefab"/>
-        <Bitmap profile="fs25_multiTextOptionContainer" id="multiTextPrefab">
+        <Bitmap profile="fs25_multiTextOptionContainer" id="multiTextPrefab" focusFallthrough = "true">
             <CpOptionToggle profile="fs25_settingsMultiTextOption" name="setting" namedComponents="true" onClick="onClickCpMultiTextOption" hideButtonOnLimitReached="False">
                 <Text profile="fs25_multiTextOptionTooltip" name="tooltip"/>
                 <Text profile="cpSettingsMultiOptionTitle" name="label"/>
