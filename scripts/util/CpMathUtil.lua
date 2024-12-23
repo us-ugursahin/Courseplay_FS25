@@ -7,8 +7,8 @@ function CpMathUtil.getIntersectionPoint(A1x, A1y, A2x, A2y, B1x, B1y, B2x, B2y)
 	s2_y = B2y - B1y
 
 	local s, t
-	s = (-s1_y * (A1x - B1x) + s1_x * (A1y - B1y)) / (-s2_x * s1_y + s1_x * s2_y)
-	t = ( s2_x * (A1y - B1y) - s2_y * (A1x - B1x)) / (-s2_x * s1_y + s1_x * s2_y)
+	s = CpMathUtil.divide(-s1_y * (A1x - B1x) + s1_x * (A1y - B1y), -s2_x * s1_y + s1_x * s2_y)
+	t = CpMathUtil.divide( s2_x * (A1y - B1y) - s2_y * (A1x - B1x), -s2_x * s1_y + s1_x * s2_y)
 
 	if (s >= 0 and s <= 1 and t >= 0 and t <= 1) then
 		--Collision detected
