@@ -82,7 +82,6 @@ function CpHud.registerOverwrittenFunctions(vehicleType)
         SpecializationUtil.registerOverwrittenFunction(vehicleType, "enterVehicleRaycastClickToSwitch", CpHud.enterVehicleRaycastClickToSwitch)
     end
     SpecializationUtil.registerOverwrittenFunction(vehicleType, 'getCpStartText', CpHud.getCpStartText)
-    SpecializationUtil.registerOverwrittenFunction(vehicleType, 'actionEventCameraZoomInOut', CpHud.actionEventCameraZoomInOut)
 end
 
 --- Disables the click to switch action, while the mouse is over the cp hud.
@@ -314,12 +313,13 @@ function CpHud:onLeaveVehicle(wasEntered)
 end
 
 ---- Disables zoom, while mouse is over the cp hud. 
-function CpHud:actionEventCameraZoomInOut(self, superFunc, ...)
-    if self:getIsMouseOverCpHud() then 
+local function actionEventCameraZoomInOut(self, superFunc, ...)
+    if self.getIsMouseOverCpHud and self:getIsMouseOverCpHud() then 
         return
     end
     return superFunc(self, ...)
-end                                                   
+end              
+Enterable.actionEventCameraZoomInOut = Utils.overwrittenFunction(Enterable.actionEventCameraZoomInOut, actionEventCameraZoomInOut)                                   
 
 function CpHud:onStateChange(state, data)
     local spec = self.spec_cpHud
