@@ -296,18 +296,6 @@ function CpBaseHud:init(vehicle)
         self:openCourseGeneratorGui(vehicle)
     end)
 
-
-    ---- Disables zoom, while mouse is over the cp hud. 
-    local function disableCameraZoomOverHud(vehicle, superFunc, ...)
-        if vehicle.getIsMouseOverCpHud and vehicle:getIsMouseOverCpHud() then 
-            return
-        end
-        return superFunc(vehicle, ...)
-    end                                                   
-
-    Enterable.actionEventCameraZoomIn = Utils.overwrittenFunction(Enterable.actionEventCameraZoomIn, disableCameraZoomOverHud)
-    Enterable.actionEventCameraZoomOut = Utils.overwrittenFunction(Enterable.actionEventCameraZoomOut, disableCameraZoomOverHud)
-
     self.baseHud:setVisible(false)
 
     self.baseHud:setScale(self.uiScale, self.uiScale)
