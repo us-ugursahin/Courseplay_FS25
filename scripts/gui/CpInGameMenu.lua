@@ -302,8 +302,9 @@ function CpInGameMenu:getPageButtonInfo(page)
 end
 
 function CpInGameMenu:lockCurrentVehicle(vehicle)
+	local lastVehicle = self.currentVehicle
 	self.currentVehicle = vehicle
-	if vehicle ~= self.currentVehicle then 
+	if vehicle ~= lastVehicle then 
 		g_messageCenter:publish(MessageType.GUI_CP_INGAME_CURRENT_VEHICLE_CHANGED, vehicle)
 	end
 end
