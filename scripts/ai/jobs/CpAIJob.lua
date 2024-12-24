@@ -468,15 +468,6 @@ function CpAIJob:debug(...)
 	end
 end
 
-function CpAIJob:getDescription()
-	return CpUtil.try(AIJob.getDescription, self) or ""
-end
-
-function CpAIJob:getHelperName()
-	return CpUtil.try(AIJob.getHelperName, self) or ""
-end
-
-
 --- Ugly hack to fix a mp problem from giants, where the job class can not be found.
 function CpAIJob.getJobTypeIndex(aiJobTypeManager, superFunc, job)
 	local ret = superFunc(aiJobTypeManager, job)
