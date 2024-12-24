@@ -345,7 +345,7 @@ function CpAIWorker:stopCurrentAIJob(superFunc, message, ...)
             return
         end
     end
-    CpUtil.debugVehicle(CpDebug.DBG_FIELDWORK, self, "stop message: %s", message:getMessage(job))
+    CpUtil.debugVehicle(CpDebug.DBG_FIELDWORK, self, "stop message: %s", message:getI18NText())
     superFunc(self, message,...)
 end
 
