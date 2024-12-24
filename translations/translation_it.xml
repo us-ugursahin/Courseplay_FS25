@@ -117,7 +117,7 @@
     <text name="CP_ai_messageErrorNoPathFound" text="L'operatore IA %s ha interrotto il lavoro in modo imprevisto - nessun percorso trovato!"/>
     <text name="CP_ai_messageErrorGroundUnloadNotSupported" text="Il lavoratore IA %s ha interrotto il lavoro in modo imprevisto - lo scarico sul campo non è possibile!"/>
     <text name="CP_ai_messageErrorCutterNotSupported" text="L'operatore IA %s ha smesso di funzionare in modo imprevisto: il collegamento in testa è impossibile!"/>
-    <text name="CP_ai_messageErrorAutomaticCutterAttachNotActive" text="L'operatore IA %s ha interrotto il lavoro in modo imprevisto: attacco taglierina automatico disattivato!"/>
+    <text name="CP_ai_messageErrorAutomaticCutterAttachNotActive" text="L'operatore IA %s ha interrotto il lavoro in modo imprevisto: attacco Barra Falciante automatico disattivato!"/>
     <text name="CP_ai_messageErrorWrongMissionFruitType" text="Il lavoratore IA %s ha interrotto il lavoro in modo imprevisto: tipo di riempimento errato per la missione selezionata!"/>
     <!---->
     <!--AI fieldwork task descriptions-->
@@ -252,8 +252,8 @@
     <!---->
     <!--Vehicle settings combine-->
     <!---->
-    <text name="CP_vehicle_setting_automaticCutterAttach_title" text="Attacco automatico della taglierina"/>
-    <text name="CP_vehicle_setting_automaticCutterAttach_tooltip" text="Consente il fissaggio automatico di una taglierina, che deve essere fissata come rimorchio o su un rimorchio per testata separato."/>
+    <text name="CP_vehicle_setting_automaticCutterAttach_title" text="Attacco automatico della Barra Falciante"/>
+    <text name="CP_vehicle_setting_automaticCutterAttach_tooltip" text="Consente il fissaggio automatico di una Barra Falciante, che deve essere fissata come rimorchio o su un rimorchio per testata separato."/>
     <text name="CP_vehicle_setting_pipeAlwaysUnfold_title" text="Aprire sempre il tubo"/>
     <text name="CP_vehicle_setting_pipeAlwaysUnfold_tooltip" text="Aprire sempre il tubo quando la mietitrebbia è piena e attende lo scaricatore"/>
     <text name="CP_vehicle_setting_stopForUnload_title" text="Fermati durante lo scarico"/>
@@ -495,8 +495,8 @@ Il percorso viene salvato automaticamente alla chiusura dell'editor e sovrascriv
     <text name="CP_infoTexts_wrongBaleWrapType" text="Tipo di balla errato"/>
     <text name="CP_infoTexts_errorNoPathFound" text="Nessun percorso trovato"/>
     <text name="CP_infoTexts_errorGroundUnloadNotSupported" text="Scarico a terra non supportato"/>
-    <text name="CP_infoTexts_errorCutterNotSupported" text="Taglierina non supportata"/>
-    <text name="CP_infoTexts_errorAutomaticCutterAttachNotActive" text="Attacco taglierina disattivato"/>
+    <text name="CP_infoTexts_errorCutterNotSupported" text="Barra Falciante non supportata"/>
+    <text name="CP_infoTexts_errorAutomaticCutterAttachNotActive" text="Attacco Barra Falciante disattivato"/>
     <text name="CP_infoTexts_errorWrongSeason" text="Stagione sbagliata per il prodotto"/>
     <text name="CP_infoTexts_errorWrongMissionFruitType" text="Raccolto sbagliato per la missione selezionata"/>
     <text name="CP_infoTexts_errorPalletsAreFull" text="I pallet sono pieni"/>
@@ -867,8 +867,8 @@ I messaggi di stato sono:
 - Tipo di balla sbagliata
 - Nessun percorso trovato
 - Ribaltamento a terra impossibile
-- Taglierina non supportata
-- Attacco taglierina disattivato
+- Barra Falciante non supportata
+- Attacco Barra Falciante disattivato
 - Stagione sbagliata per il prodotto
 - Prodotto sbagliato per la missione selezionata
 - I pallet sono pieni
@@ -1048,8 +1048,8 @@ Ora la tua selezione dovrebbe essere simile all'immagine.
     <text name="input_CP_OPEN_CLOSE_VEHICLE_SETTING_DISPLAY" text="CP: Apri mini GUI"/>
     <text name="input_CP_START_STOP" text="CP: Avvia/Ferma autista"/>
     <text name="input_CP_GENERATE_COURSE" text="CP: Cambia il lavoro attualmente selezionato"/>
-    <text name="input_CP_CHANGE_SELECTED_JOB" text="CP: Cambia lavoro selezionato"/>
     <text name="input_CP_CHANGE_STARTING_POINT" text="CP: Cambia punto di partenza"/>
+    <text name="input_CP_CHANGE_SELECTED_JOB" text="CP: Cambia lavoro selezionato"/>
     <text name="input_CP_CLEAR_COURSE" text="CP: Cancella il percorso attualmente caricato"/>
     <text name="input_CP_CHANGE_COURSE_VISIBILITY" text="Mostra il percorso attuale del veicolo"/>
     <text name="input_CP_TOGGLE_MOUSE" text="CP: Cursore Mouse on/off"/>
@@ -1058,6 +1058,6 @@ Ora la tua selezione dovrebbe essere simile all'immagine.
     <text name="input_CP_OPEN_GLOBAL_SETTINGS" text="CP: Apre le impostazioni globali"/>
     <text name="input_CP_OPEN_COURSEGENERATOR_SETTINGS" text="CP: Apri il generatore di corsi/menu dei lavori"/>
     <text name="input_CP_OPEN_COURSEMANAGER" text="CP: Apre gestore percorsi"/>
-    <text name="input_CP_OPEN_INGAME_MENU" text="CP: Open menu"/>
+	<text name="input_CP_OPEN_INGAME_MENU" text="CP: Apri menu"/>
   </texts>
 </l10n>
