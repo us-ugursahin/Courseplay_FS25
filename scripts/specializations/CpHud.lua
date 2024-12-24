@@ -78,10 +78,11 @@ function CpHud.registerFunctions(vehicleType)
 end
 
 function CpHud.registerOverwrittenFunctions(vehicleType)
-   if vehicleType.functions["enterVehicleRaycastClickToSwitch"] ~= nil then 
+    if vehicleType.functions["enterVehicleRaycastClickToSwitch"] ~= nil then 
         SpecializationUtil.registerOverwrittenFunction(vehicleType, "enterVehicleRaycastClickToSwitch", CpHud.enterVehicleRaycastClickToSwitch)
-   end
-   SpecializationUtil.registerOverwrittenFunction(vehicleType, 'getCpStartText', CpHud.getCpStartText)
+    end
+    SpecializationUtil.registerOverwrittenFunction(vehicleType, 'getCpStartText', CpHud.getCpStartText)
+    SpecializationUtil.registerOverwrittenFunction(vehicleType, 'actionEventCameraZoomInOut', CpHud.actionEventCameraZoomInOut)
 end
 
 --- Disables the click to switch action, while the mouse is over the cp hud.
@@ -104,7 +105,7 @@ function CpHud:onRegisterActionEvents(isActiveForInput, isActiveForInputIgnoreSe
     if self.isClient then
         local spec = self.spec_cpHud
         self:clearActionEventsTable(spec.actionEvents)
-        if self.isActiveForInputIgnoreSelectionIgnoreAI then
+        if self.isActiveForInputIgnoreSelectionIgnoreAI and self.propertyState ~= VehiclePropertyState.SHOP_CONFIG then
             --- Toggle mouse cursor action event
             --- Parameters: 
             --- (actionEventsTable, inputAction, target,
@@ -311,6 +312,14 @@ function CpHud:onLeaveVehicle(wasEntered)
    	    self:resetCpHud()
     end
 end
+
+---- Disables zoom, while mouse is over the cp hud. 
+function CpHud:actionEventCameraZoomInOut(self, superFunc, ...)
+    if self:getIsMouseOverCpHud() then 
+        return
+    end
+    return superFunc(self, ...)
+end                                                   
 
 function CpHud:onStateChange(state, data)
     local spec = self.spec_cpHud
