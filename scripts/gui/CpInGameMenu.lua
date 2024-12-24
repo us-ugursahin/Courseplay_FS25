@@ -303,7 +303,7 @@ end
 
 function CpInGameMenu:lockCurrentVehicle(vehicle)
 	if vehicle ~= self.currentVehicle then 
-		g_messageCenter:publishDelayed(MessageType.GUI_CP_INGAME_CURRENT_VEHICLE_CHANGED, vehicle)
+		g_messageCenter:publish(MessageType.GUI_CP_INGAME_CURRENT_VEHICLE_CHANGED, vehicle)
 	end
 	self.currentVehicle = vehicle
 end
