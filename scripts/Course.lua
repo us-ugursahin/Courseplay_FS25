@@ -965,7 +965,8 @@ end
 ---@param reverse boolean is this a reverse course?
 function Course.createFromNode(vehicle, referenceNode, xOffset, from, to, step, reverse)
     local waypoints = {}
-    local distance = math.abs(from - to)
+    -- never go under 0.5 m length, also protect from division by zero when from == to
+    local distance = math.max(math.abs(from - to), 0.5)
     -- if the distance < step, reduce step to the distance, so we have at least two waypoints.
     local nPoints = math.floor(distance / math.min(distance, math.abs(step))) + 1
     local dBetweenPoints = (to - from) / (nPoints - 1)

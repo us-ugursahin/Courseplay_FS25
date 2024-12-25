@@ -284,13 +284,15 @@ function TurnManeuver:adjustCourseToFitField(course, dBack, ixBeforeEndingTurnSe
     if self.turnContext.turnEndForwardOffset > 0 and math.max(dFromTurnEnd, dFromWorkStart) > -self.steeringLength then
         self:debug('Reverse to work start (implement in back)')
         -- vehicle in front of the work start node at turn end
-        local forwardAfterTurn = Course.createFromNode(self.vehicle, self.turnContext.vehicleAtTurnEndNode, 0,
-                dFromTurnEnd + 1 + self.steeringLength / 2, dFromTurnEnd + 1 + self.steeringLength, 0.8, false)
-        courseWithReversing:append(forwardAfterTurn)
-        self:applyTightTurnOffset(forwardAfterTurn:getLength())
-        -- allow early direction change when aligned
-        TurnManeuver.setTurnControlForLastWaypoints(courseWithReversing, forwardAfterTurn:getLength(),
-                TurnManeuver.CHANGE_DIRECTION_WHEN_ALIGNED, true, true)
+        if self.steeringLength > 0 then
+            local forwardAfterTurn = Course.createFromNode(self.vehicle, self.turnContext.vehicleAtTurnEndNode, 0,
+                    dFromTurnEnd + 1 + self.steeringLength / 2, dFromTurnEnd + 1 + self.steeringLength, 0.8, false)
+            courseWithReversing:append(forwardAfterTurn)
+            self:applyTightTurnOffset(forwardAfterTurn:getLength())
+            -- allow early direction change when aligned
+            TurnManeuver.setTurnControlForLastWaypoints(courseWithReversing, forwardAfterTurn:getLength(),
+                    TurnManeuver.CHANGE_DIRECTION_WHEN_ALIGNED, true, true)
+        end
         -- go all the way to the back marker distance so there's plenty of room for lower early too, also, the
         -- reversingOffset may be even behind the back marker, especially for vehicles which have a AIToolReverserDirectionNode
         -- which is then used as the PPC controlled node, and thus it must be far enough that we reach the lowering
