@@ -421,7 +421,9 @@ function AnalyticTurnManeuver:getDistanceToMoveBack(course, workWidth, distanceT
     -- the field, not only the center
     local headlandAngle = self.turnContext:getHeadlandAngle()
     distanceToFieldEdge = distanceToFieldEdge -
-            (headlandAngle > 0.0001 and (workWidth / 2 / math.abs(math.tan(headlandAngle))) or 0)
+    -- exclude very sharp headland angles to prevent moving back ridiculously far
+            ((headlandAngle > math.deg(10) and headlandAngle < math.deg(170))
+                    and (workWidth / 2 / math.abs(math.tan(headlandAngle))) or 0)
     self:debug('dzMax=%.1f, workWidth=%.1f, spaceNeeded=%.1f, turnEndForwardOffset=%.1f, headlandAngle=%.1f, distanceToFieldEdge=%.1f', dzMax, workWidth,
             spaceNeededOnFieldForTurn, turnEndForwardOffset, math.deg(headlandAngle), distanceToFieldEdge)
     return spaceNeededOnFieldForTurn - distanceToFieldEdge
