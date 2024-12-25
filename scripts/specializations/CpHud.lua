@@ -112,7 +112,7 @@ function CpHud:onRegisterActionEvents(isActiveForInput, isActiveForInputIgnoreSe
             ---  callbackState, customIconName, ignoreCollisions, reportAnyDeviceCollision)
             if self:getCpSettings().openHudWithMouse:getValue() then
                 local _, actionEventId = self:addActionEvent(spec.actionEvents, InputAction.CP_TOGGLE_MOUSE, self,
-                        CpHud.actionEventMouse, false, true, false, true, nil, true, true)
+                    CpHud.actionEventMouse, false, true, false, true, nil, nil, true, true)
                 g_inputBinding:setActionEventTextPriority(actionEventId, GS_PRIO_NORMAL)
                 g_inputBinding:setActionEventText(actionEventId, spec.openCloseText)
                 g_inputBinding:setActionEventTextVisibility(actionEventId, 
