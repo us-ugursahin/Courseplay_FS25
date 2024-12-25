@@ -214,8 +214,8 @@
     <text name="CP_vehicle_setting_debugActive_title" text="Отладка техники"/>
     <text name="CP_vehicle_setting_debugActive_tooltip" text="Вкл/выкл отладку текущей техники."/>
     <text name="CP_vehicle_setting_refillOnTheField_title" text="Заправка инструмента"/>
-    <text name="CP_vehicle_setting_refillOnTheField_tooltip" text="Заправлять инструмент на поле"/>
-    <text name="CP_vehicle_setting_refillOnTheField_waiting" text="Ожидание"/>
+    <text name="CP_vehicle_setting_refillOnTheField_tooltip" text="Заправка оборудования на поле"/>
+    <text name="CP_vehicle_setting_refillOnTheField_waiting" text="Ожидать"/>
     <text name="CP_vehicle_setting_refillOnTheField_active" text="Активна"/>
     <!---->
     <!--Vehicle bunker silo settings-->
@@ -371,7 +371,7 @@
     <text name="CP_global_setting_fuelThreshold_title" text="Порог топлива"/>
     <text name="CP_global_setting_fuelThreshold_tooltip" text="Водитель будет отпущен, если уровень топлива меньше порога."/>
     <text name="CP_global_setting_waitForRefueling_title" text="Ждать дозаправки"/>
-    <text name="CP_global_setting_waitForRefueling_tooltip" text="Автомобиль ждет, пока он не заправляется."/>
+    <text name="CP_global_setting_waitForRefueling_tooltip" text="Техника ждёт, пока её не заправят."/>
     <text name="CP_global_setting_brokenThreshold_title" text="Порог поломок"/>
     <text name="CP_global_setting_brokenThreshold_tooltip" text="Водитель будет отпущен, если транспортное средство или оборудование будут изношенным более порога. 100% это ВЫКЛ."/>
     <text name="CP_global_setting_stopThreshingDuringRain_title" text="Останавливать комбайны, пока идёт дождь"/>
@@ -1031,7 +1031,7 @@ HUD также показывает оставшийся уровень запо
     <text name="input_CP_DBG_CHANNEL_MENU_VISIBILITY" text="CP: Показать/Скрыть каналы отладки"/>
     <text name="input_CP_OPEN_CLOSE_VEHICLE_SETTING_DISPLAY" text="CP: Открыть mini GUI"/>
     <text name="input_CP_START_STOP" text="CP: Отправить/Остановить водителя"/>
-    <text name="input_CP_GENERATE_COURSE" text="CP: Изменить текущую выбранную работу"/>
+    <text name="input_CP_GENERATE_COURSE" text="CP: Генератор курса"/>
     <text name="input_CP_CHANGE_SELECTED_JOB" text="CP: Изменить текущую выбранную работу"/>
     <text name="input_CP_CHANGE_STARTING_POINT" text="CP: Изменить точку отправки"/>
     <text name="input_CP_CLEAR_COURSE" text="CP: Очистить текущий загруженный курс"/>
