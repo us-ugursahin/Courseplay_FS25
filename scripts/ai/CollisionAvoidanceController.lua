@@ -69,7 +69,7 @@ function CollisionAvoidanceController:findPotentialCollisions()
                     -- for our own ETE, we always use the field speed and not the actual speed. This is to make sure
                     -- we come to a full stop on a warning and remain stopped while the warning is active
                     local myEte = myDistanceToCollision / (self.strategy:getFieldSpeed())
-                    local otherEte = otherDistanceToCollision / (vehicle.lastSpeedReal * 1000)
+                    local otherEte = CpMathUtil.divide(otherDistanceToCollision, (vehicle.lastSpeedReal * 1000))
                     -- self:debug('Checking %s at %.1f m, %.1f, ETE %.1f %.1f', CpUtil.getName(vehicle), d, myDistanceToCollision, myEte, otherEte)
                     if math.abs(myEte - otherEte) < self.eteDiffThreshold then
                         if not self.warning:get() or (self.warning:get() and vehicle ~= self.warningVehicle) then
