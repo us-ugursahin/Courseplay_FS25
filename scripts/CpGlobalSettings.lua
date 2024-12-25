@@ -84,7 +84,7 @@ function CpGlobalSettings:onHudSelectionChanged()
 end
 
 function CpGlobalSettings:onActionEventTextVisibilityChanged()
-    local vehicle = CpUtil.getCurrentVehicle()
+    local vehicle = g_localPlayer and CpUtil.getCurrentVehicle()
     if vehicle then 
         vehicle:requestActionEventUpdate()
     end
